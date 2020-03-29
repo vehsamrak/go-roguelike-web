@@ -18,20 +18,21 @@
 import {Component, Prop, Vue} from 'vue-property-decorator'
 
 @Component
-export default class HelloWorld extends Vue {
+export default class Map extends Vue {
   @Prop() private msg!: string;
-  data () {
+
+  data() {
     return {
       mapRows: [
-        [{type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}],
-        [{type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}],
-        [{type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}],
-        [{type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}],
-        [{type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}],
-        [{type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}],
-        [{type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}],
-        [{type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}],
-        [{type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}, {type: '#'}]
+        [{ type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }],
+        [{ type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }],
+        [{ type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }],
+        [{ type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }],
+        [{ type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }],
+        [{ type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }],
+        [{ type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }],
+        [{ type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }],
+        [{ type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }, { type: '#' }]
       ]
     }
   }
@@ -40,6 +41,16 @@ export default class HelloWorld extends Vue {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  div#game {
+    display: block;
+    position: absolute;
+    height: 95%;
+    width: 100%;
+    color: black;
+    line-height: 100%;
+    text-align: center;
+  }
+
   div#map .room {
     display: inline-block;
     background-image: url("/img/room-types/grass.png");
@@ -59,14 +70,6 @@ export default class HelloWorld extends Vue {
 
   div#map .row {
     margin: 0;
-  }
-
-  div#game {
-    display: block;
-    position: absolute;
-    height: 95%;
-    width: 100%;
-    color: black;
   }
 
   div#map {
